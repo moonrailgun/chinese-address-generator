@@ -1,5 +1,5 @@
 const generator = require('./generator');
-const { getRandom } = require('./utils');
+const { getRandom, randomNum } = require('./utils');
 const fs = require('fs');
 let level4 = fs.readFileSync('./data/level4.txt', { encoding: 'utf8' });
 
@@ -19,4 +19,22 @@ function generateLevel4() {
   }
 }
 
-module.exports = generateLevel4;
+
+function fabricateFullAddress(hasCode = false) {
+  const street = generateLevel4();
+  const buildNo = randomNum(1400).toString().padStart(3, '0') + 1; // 001 - 1400
+  const room = (randomNum(8) + 1) + '0' + randomNum(9); // 101 - 909
+
+  let address = `${street.region}${buildNo}号${room}室`;
+  if(!hasCode) {
+    return address;
+  }else {
+    return {
+      region: address,
+      code: street.code
+    }
+  }
+}
+
+exports.fabricateFullAddress = fabricateFullAddress;
+exports.generateLevel4 = generateLevel4;

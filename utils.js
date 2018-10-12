@@ -8,4 +8,5 @@ const getRandom = function(arr) {
   return arr[randomNum(size)];
 }
 
+exports.randomNum = randomNum;
 exports.getRandom = getRandom;
