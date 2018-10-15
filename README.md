@@ -40,7 +40,7 @@ generator.generateLevel4(); // => {region: "上海市市辖区浦东新区东海
 **注意: 该地址是瞎编的。按照这个地址去找不能保证绝对有**
 ```javascript
 const generator = require('chinese-address-generator/generator4');
-generator.fabricateFullAddress(); // => {region: "上海市市辖区浦东新区外高桥保税区0051号606室", code: "310115501000"}
+generator.fabricateFullAddress(); // => {region: "上海市市辖区浦东新区外高桥保税区005号606室", code: "310115501000"}
 ```
 
 *P.S.: 生成规则:(001-1400)号(101-909)室*

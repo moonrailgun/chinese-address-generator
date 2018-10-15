@@ -1,6 +1,6 @@
 {
   "name": "chinese-address-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "中国地址生成器 - 三级地址 四级地址 随机生成完整地址",
   "main": "index.js",
   "scripts": {

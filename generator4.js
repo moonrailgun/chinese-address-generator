@@ -22,7 +22,7 @@ function generateLevel4() {
 
 function fabricateFullAddress(hasCode = false) {
   const street = generateLevel4();
-  const buildNo = randomNum(1400).toString().padStart(3, '0') + 1; // 001 - 1400
+  const buildNo = (randomNum(1400) + 1).toString().padStart(3, '0'); // 001 - 1400
   const room = (randomNum(8) + 1) + '0' + randomNum(9); // 101 - 909
 
   let address = `${street.region}${buildNo}号${room}室`;
