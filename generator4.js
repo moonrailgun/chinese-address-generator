@@ -1,7 +1,8 @@
 const generator = require('./generator');
+const path = require('path');
 const { getRandom, randomNum } = require('./utils');
 const fs = require('fs');
-let level4 = fs.readFileSync('./data/level4.txt', { encoding: 'utf8' });
+let level4 = fs.readFileSync(path.resolve(__dirname, './data/level4.txt'), { encoding: 'utf8' });
 
 level4 = level4.split('\n');
 level4 = level4.map(row => row.split(','));
